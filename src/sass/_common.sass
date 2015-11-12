@@ -48,10 +48,43 @@
 // 	+jpg(bla)
 
 
++font(opensans, opensans)
++font(opensans-semibold, opensans-semibold)
++font(opensans-bold, opensans-bold)
++font(myriadpro, myriadpro)
+
+=op
+	font-family: "opensans", Arial, sans-serif
+=op-sb
+	font-family: "opensans-semibold", Arial, sans-serif
+=op-b
+	font-family: "opensans-bold", Arial, sans-serif
+=myriad
+	font-family: "myriadpro", sans-serif
+
 body
-	font-family: Arial, sans-serif
+	min-width: 320px
 	font-size: 12px
+	background-color: #FFFFFF
 	line-height: 1.4
+	+op
 
 
 // common blocks
+.l
+	max-width: 1030px
+	margin: 0 auto
+	padding: 0 15px
+
+a
+	text-decoration: none
+
+.txt-bold
+	+op-b
+
+// icons
+.icon
+	display: inline-block
+
+.icon-tel
+	+s(tel)

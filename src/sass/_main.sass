@@ -1,9 +1,222 @@
-// Normally mainpage styles
-// body
-// 	+s(coderiver)
-div
+// upper
+.upper
+	position: relative
+	padding-top: 185px
+	text-align: center
+	background-image: url(../img/bg.jpg)
+	+cover
+	&__img
+		max-width: 100%
+		height: auto
+	&__ttl
+		font-size: 24px
+	&__txt
+		position: relative
+		padding: 50px 0
+		font-size: 18px
+		color: #FFF
+		&:before
+			content: ""
+			display: block
+			width: 100%
+			max-width: 435px
+			height: 47px
+			margin: 0 auto
+			background-image: url(../img/arr-white.png)
+			background-position: center center
+
+// about
+.about
+	font-size: 16px
+	line-height: 1.9
+	&__in
+		padding: 10px 40px 0
+		+clr
+	&__txt
+		float: left
+		max-width: 420px
+		color: #222
+
+		&:last-child
+			float: right
+			text-align: right
+	&__info
+		position: relative
+		padding-top: 50px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			width: 100%
+			max-width: 1088px
+			height: 118px
+			margin: 0 auto
+			background-image: url(../img/arr.png)
+			background-position: center center
+
+	&__explain
+		max-width: 430px
+		margin: 0 auto 60px
+		text-align: justify
+		h3
+			margin-bottom: 25px
+			text-transform: uppercase
+			text-align: center
+			font-size: 30px
+			color: #42484a
+			line-height: 36px
+			+op-sb
 	+r(1024)
-		display: block
-p
-	+r(1024)
-		background: red
+		&__in
+			margin: 20px 0
+			padding: 0
+		&__txt
+			float: none
+			max-width: initial
+			text-align: center
+			&:last-child
+				float: none
+				text-align: center
+
+// advantage
+.advantage
+	padding-top: 80px
+	background: url(../img/advantage-bg.jpg) repeat
+	&__in
+		+clr
+	&__ttl
+		position: relative
+		text-align: right
+		text-transform: uppercase
+		font-size: 30px
+		color: #ffebb8
+		line-height: 36px
+		z-index: 0
+		+op-sb
+		&:after
+			content: ""
+			position: absolute
+			top: 15px
+			right: 0
+			width: 100%
+			max-width: 665px
+			height: 141px
+			background-image: url(../img/line.png)
+			-webkit-background-size: contain
+			-o-background-size: contain
+			background-size: contain
+			background-repeat: no-repeat
+			z-index: -1
+		&.is-left
+			text-align: left
+			margin-bottom: 30px
+			&:after
+				top: initial
+				right: initial
+				left: 0
+				bottom: 15px
+	&__bl
+		position: relative
+		float: left
+		font-size: 16px
+		color: #aac8ea
+		+clr
+		&.is-right
+			float: right
+			text-align: right
+			.advantage__wrap
+				float: right
+				&:after
+					left: 24px
+					right: initial
+					+arr(24, 74, #fff, l)
+			.advantage__pic
+				margin: 0 0 0 40px
+	&__wrap
+		position: relative
+		float: left
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			right: 24px
+			margin-top: -37px
+			+arr(24, 74, #fff, r)
+	&__pic
+		position: relative
+		max-width: 204px
+		max-height: 204px
+		margin-right: 40px
+		background-color: #375272
+		border: 2px solid #fff
+		border-radius: 50%
+		box-shadow: inset 3.5px 3.5px 5px rgba(25, 24, 20, 0.25)
+		cursor: pointer
+		overflow: hidden
+		z-index: 1
+		&:hover
+			img
+				+scale(1.1)
+		img
+			position: relative
+			width: 100%
+			border-radius: 50%
+			z-index: 1
+			+tr(0.3s)
+	&__txt
+		margin-top: 35px
+		max-width: 430px
+		overflow: hidden
+		h4
+			margin-bottom: 30px
+			font-size: 20px
+			color: #FFF
+			+op-sb
+	&__info
+		float: left
+		width: 50%
+		padding: 0 20px 0 0
+		font-size: 16px
+		color: #fff
+		line-height: 30px
+		&:last-child
+			padding: 0 0 0 20px
+		p
+			margin-bottom: 27px
+	+r(900)
+		&__ttl
+			margin-bottom: 100px
+			&.is-left
+				margin-top: 60px
+	+r(650)
+		&__ttl
+			text-align: center
+			&:after
+				display: none
+			&.is-left
+				text-align: center
+		&__bl
+			float: none
+			margin-bottom: 40px
+			&.is-right
+				float: none
+				text-align: center
+				.advantage__wrap
+					float: none
+				.advantage__pic
+					margin: 0 auto
+		&__wrap
+			float: none
+			&:after
+				display: none
+		&__pic
+			margin: 0 auto
+		&__txt
+			max-width: initial
+			text-align: center
+		&__info
+			float: none
+			width: 100%
+			padding: 0
+			&:last-child
+				padding: 0
