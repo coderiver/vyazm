@@ -24,6 +24,11 @@
 			margin: 0 auto
 			background-image: url(../img/arr-white.png)
 			background-position: center center
+	+r(900)
+		&__img
+			padding: 0 2%
+	+r(650)
+		padding-top: 130px
 
 // about
 .about
@@ -191,10 +196,12 @@
 				margin-top: 60px
 	+r(650)
 		&__ttl
+			margin-bottom: 50px
 			text-align: center
 			&:after
 				display: none
 			&.is-left
+				margin-top: 20px
 				text-align: center
 		&__bl
 			float: none
@@ -230,6 +237,7 @@
 		width: 25%
 		vertical-align: middle
 		overflow: hidden
+		cursor: pointer
 	&__img
 		display: block
 		width: 100%
@@ -244,13 +252,234 @@
 	+r(650)
 		&__bl
 			width: 100%
+		&__img
+			height: 220px
+
+// plan
+.plan
+	padding: 60px 0
+	background: url(../img/plan-bg.jpg) repeat
+	&__in
+		+clr
+	&__bl
+		position: relative
+		width: 50%
+		float: left
+		font-size: 16px
+		color: #111212
+		&:first-child
+			padding-left: 40px
+			padding-bottom: 20px
+	&__ttl
+		margin-bottom: 25px
+		font-size: 48px
+		text-transform: uppercase
+		color: #335361
+		line-height: 1
+		+op-sb
+	&__zoom
+		margin-top: 25px
+		img
+			max-width: 100%
+	+r(1024)
+		&__bl
+			float: none
+			width: 100%
+			&:first-child
+				margin-bottom: 40px
+				padding-left: 0
+				text-align: center
+		&__zoom
+			text-align: center
+	+r(650)
+		&__ttl
+			font-size: 35px
+
+.aero
+	position: absolute
+	right: 0
+	bottom: 0
+	text-transform: uppercase
+	color: #335361
+	z-index: 2
+	+op-sb
+	&:after
+		content: ""
+		position: absolute
+		right: 18px
+		bottom: 25px
+		+s(arr)
+	&__link
+		display: block
+		width: 110px
+		height: 110px
+		margin-bottom: 10px
+		background-color: #335361
+		border-radius: 50%
+		+vertical
+		.icon
+			vertical-align: middle
+	+r(1024)
+		right: 20px
+	+r(650)
+		position: static
+		&:after
+			display: none
+		&__link
+			width: 80px
+			height: 80px
+			margin: 20px auto
+
+.zoomContainer
+	+r(768)
+		display: none
+
+// tabs
+.tabs
+	position: relative
+	padding-left: 20px
+	z-index: 2
+	+clr
+	&__list
+		position: relative
+		float: left
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: -2px
+			bottom: -20px
+			width: 14px
+			background-image: url(../img/shadow.png)
+			z-index: 2
+			+cover
+	&__content
+		overflow: hidden
+	&__bl
+		display: none
+		&.is-active
+			display: block
+		img
+			max-width: 100%
+			border: 2px solid #f6b188
+	&__num
+		position: relative
+		font-size: 24px
+		padding: 23px 11px 4px
+		color: #fff
+		cursor: pointer
+		line-height: 1
+		-webkit-tap-highlight-color: transparent
+		+op-sb
+		&:after
+			content: ""
+			position: absolute
+			top: 100%
+			right: 0
+			z-index: 1
+		&.is-a
+			padding-top: 20px
+			background: #f6b188
+			&:after
+				+arr(40, 20, #f6b188, tr)
+		&.is-b
+			background: #edb2d2
+			&:after
+				+arr(40, 20, #edb2d2, tr)
+		&.is-c
+			background: #dcde4c
+			&:after
+				+arr(40, 20, #dcde4c, tr)
+		&.is-d
+			background: #f9eb10
+			&:after
+				+arr(40, 20, #f9eb10, tr)
+		&.is-e
+			background: #fbb51f
+			&:after
+				+arr(40, 20, #fbb51f, tr)
+		&.is-f
+			background: #94d1d2
+			&:after
+				+arr(40, 20, #94d1d2, tr)
+		&.is-g
+			background: #808080
+			&:after
+				+arr(40, 20, #808080, tr)
+		&.is-h
+			background: #a7b6bd
+			&:after
+				+arr(40, 20, #a7b6bd, tr)
+	+r(1024)
+		max-width: 500px
+		margin: 0 auto
+		padding-left: 0
+	+r(650)
+		&__list
+			&:before
+				bottom: 0
+		&__num
+			padding: 7px 11px
+			font-size: 16px
+			&:after
+				display: none
+			&:first-child
+				padding-top: 7px
 
 // development
 .development
+	&__ttl
+		position: relative
+		padding-top: 50px
+		text-transform: uppercase
+		text-align: center
+		letter-spacing: 3px
+		+neuron
+		h2
+			position: relative
+			display: inline-block
+			font-size: 35px
+			color: #21afa4
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				margin-top: -13.5px
+				z-index: 1
+			&:before
+				right: 100%
+				margin-right: 107px
+				+arr(16, 27, #fff, r)
+			&:after
+				left: 100%
+				margin-left: 107px
+				+arr(16, 27, #fff, l)
+		span
+			position: relative
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				width: 98px
+				top: 50%
+				margin-top: -13.5px
+				height: 27px
+				background: #21afa4
+			&:before
+				right: 100%
+				margin-right: 25px
+			&:after
+				left: 100%
+				margin-left: 25px
+	&__subttl
+		padding-top: 17px
+		font-size: 20px
+		color: #ef3122
 	&__in
 		display: table
 		width: 100%
-		padding: 65px 0
+		padding: 50px 0 65px
 	&__bl
 		display: table-cell
 		padding: 0 20px
@@ -323,6 +552,16 @@
 		&__txt
 			max-width: initial
 			margin: 0 auto 30px
+	+r(650)
+		&__ttl
+			h2
+				&:before,
+				&:after
+					display: none
+			span
+				&:before,
+				&:after
+					display: none
 
 // contacs
 .contacts
@@ -372,10 +611,13 @@
 
 // form
 .form
+	position: relative
 	max-width: 350px
 	text-align: left
 	padding: 35px 30px 25px
 	background-color: #ffebb8
+	&.no-bg
+		background: none
 	&__ttl
 		margin-bottom: 25px
 		text-transform: uppercase
@@ -391,6 +633,23 @@
 		width: 100%
 		margin-top: 15px
 		padding: 9px
+	&__close
+		position: absolute
+		top: 43px
+		right: -10px
+		width: 26px
+		height: 26px
+		color: #FFF
+		background: #8a2222
+		border-radius: 50%
+		+vertical
+		+tr(0.3s)
+		&:hover
+			background: lighten(#8a2222, 10%)
+		span
+			display: inline-block
+			font-size: 16px
+			vertical-align: -4px
 	+r(900)
 		margin: 0 auto
 
@@ -449,3 +708,59 @@
 		&__bl
 			max-width: 350px
 			margin: 0 auto 30px
+
+#map
+	height: 400px
+	+r(900)
+		height: 300px
+	+r(650)
+		height: 200px
+
+.help-block.form-error
+	padding-top: 5px
+	font-size: 12px
+	color: #e1000a
+
+// slider
+.slider
+	//display: inline-block
+	width: 100%
+	height: 100%
+	.slider__item
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-position: 50% 50%
+	.slick-list
+		width: 100%
+	.slick-track,
+	.slick-list
+		height: 100%
+	.slick-prev,
+	.slick-next
+		position: absolute
+		top: auto
+		bottom: 50px
+		margin: 0
+		width: 104px
+		height: 104px
+		background-color: rgba(19, 29, 45, 0.6)
+		border: 2px solid #FFF
+		border-radius: 50%
+		z-index: 100
+		&:hover
+			opacity: .7
+		&:before
+			content: ""
+	.slick-prev
+		left: 80px
+		padding-right: 10px
+		+r(760)
+			left: 0
+		&:before
+			+arr(36,42,#fff,l)
+	.slick-next
+		right: 80px
+		padding-left: 10px
+		&:before
+			+arr(36,42,#fff,r)

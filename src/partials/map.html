@@ -1,0 +1,152 @@
+<div class="map" id="location">
+<div id="map"></div>
+	<script>
+		var map;
+		function initMap() {
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 12,
+				center: {lat: 55.5943907, lng:37.4571647},
+				zoomControl: true,
+				scrollwheel: false,
+				mapTypeControlOptions: {
+					mapTypeIds: [google.maps.MapTypeId.ROADMAP]
+				}
+			});
+			var iconBase = 'img/markers/';
+			var marker = new google.maps.Marker({
+				position: {lat: 55.5997527,lng: 37.4687135},
+				map: map,
+				icon: iconBase + 'marker-bag.png'
+			});
+				var infowindow = new google.maps.InfoWindow({
+				    content: 'Фуд сити'
+				});
+				marker.addListener('click', function() {
+				    infowindow.open(map, marker);
+				});
+			var marker1 = new google.maps.Marker({
+				position: {lat: 55.605533, lng: 37.4901283},
+				map: map,
+				icon: iconBase + 'marker-bag.png'
+			});
+				var infowindow1 = new google.maps.InfoWindow({
+				    content: 'Ашан, ТЦ Мега'
+				});
+				marker1.addListener('click', function() {
+				    infowindow1.open(map, marker1);
+				});
+			var marker2 = new google.maps.Marker({
+				position: {lat: 55.5810737, lng: 37.4764346},
+				map: map,
+				icon: iconBase + 'marker-bag.png'
+			});
+				var infowindow2 = new google.maps.InfoWindow({
+				    content: 'Банкомат'
+				});
+				marker2.addListener('click', function() {
+				    infowindow2.open(map, marker2);
+				});
+			var marker3 = new google.maps.Marker({
+				position: {lat: 55.6037644, lng:37.4903345 },
+				map: map,
+				icon: iconBase + 'marker-cafe.png'
+			});
+				var infowindow3 = new google.maps.InfoWindow({
+				    content: 'Starbucks в ТРЦ Мега Теплый Стан'
+				});
+				marker3.addListener('click', function() {
+				    infowindow3.open(map, marker3);
+				});
+			var marker4 = new google.maps.Marker({
+				position: {lat: 55.5985301, lng:37.5114791 },
+				map: map,
+				icon: iconBase + 'marker-heal.png'
+			});
+				var infowindow4 = new google.maps.InfoWindow({
+				    content: 'Аптека'
+				});
+				marker4.addListener('click', function() {
+				    infowindow4.open(map, marker4);
+				});
+			var marker5 = new google.maps.Marker({
+				position: {lat: 55.5883116, lng:37.3713862 },
+				map: map,
+				icon: iconBase + 'marker-heal.png'
+			});
+				var infowindow5 = new google.maps.InfoWindow({
+				    content: 'Аптека'
+				});
+				marker5.addListener('click', function() {
+				    infowindow5.open(map, marker5);
+				});
+			var marker6 = new google.maps.Marker({
+				position: {lat: 55.595037, lng: 37.4428724 },
+				map: map,
+				icon: iconBase + 'marker-bag.png'
+			});
+				var infowindow6 = new google.maps.InfoWindow({
+				    content: 'Магазин'
+				});
+				marker6.addListener('click', function() {
+				    infowindow6.open(map, marker6);
+				});
+			var marker7 = new google.maps.Marker({
+				position: {lat: 55.5981079, lng:37.5264108 },
+				map: map,
+				icon: iconBase + 'marker-sport.png'
+			});
+				var infowindow7 = new google.maps.InfoWindow({
+				    content: 'Комплекс водных развлечений Мореон'
+				});
+				marker7.addListener('click', function() {
+				    infowindow7.open(map, marker7);
+				});
+			var marker8 = new google.maps.Marker({
+				position: {lat: 55.5898196, lng:37.3740793 },
+				map: map,
+				icon: iconBase + 'marker-sport.png'
+			});
+				var infowindow8 = new google.maps.InfoWindow({
+				    content: 'Фитнес-клуб'
+				});
+				marker8.addListener('click', function() {
+				    infowindow8.open(map, marker8);
+				});
+			var marker9 = new google.maps.Marker({
+				position: {lat: 55.615257, lng:37.4724031 },
+				map: map,
+				icon: iconBase + 'marker-book.png'
+			});
+
+				var infowindow9 = new google.maps.InfoWindow({
+				    content: 'Школа № 2070'
+				});
+				marker9.addListener('click', function() {
+				    infowindow9.open(map, marker9);
+				});
+			var marker10 = new google.maps.Marker({
+				position: {lat: 55.6075092, lng:37.5103482 },
+				map: map,
+				icon: iconBase + 'marker-book.png'
+			});
+				var infowindow10 = new google.maps.InfoWindow({
+				    content: 'Школа № 2103'
+				});
+				marker10.addListener('click', function() {
+				    infowindow10.open(map, marker10);
+				});
+			var marker11 = new google.maps.Marker({
+				position: {lat: 55.605962, lng:37.5275053 },
+				map: map,
+				icon: iconBase + 'marker-book.png'
+			});
+				var infowindow11 = new google.maps.InfoWindow({
+				    content: 'Школа № 1212 '
+				});
+				marker11.addListener('click', function() {
+				    infowindow11.open(map, marker11);
+				});
+		}
+	</script>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCPLx_osAJ33YNibIjaqX9uH5kbYIlNJVY&callback=initMap" async defer></script>
+</div>

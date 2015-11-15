@@ -1,0 +1,30 @@
+// popup
+.popup
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	min-width: 320px
+	height: 100%
+	background: rgba(#000,.9)
+	padding: 20px
+	overflow: auto
+	z-index: 999
+	+vertical
+	&.popup_gallery
+		padding: 0
+		&:before
+			display: none
+		.popup__close
+			top: 50px
+			right: 80px
+			width: 104px
+			height: 104px
+			background-color: rgba(19, 29, 45, 0.6)
+			border: 2px solid #FFF
+			border-radius: 50%
+	.popup__in
+		display: inline-block
+		position: relative
+		vertical-align: middle

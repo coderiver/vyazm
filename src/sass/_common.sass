@@ -53,6 +53,7 @@
 +font(opensans-bold, opensans-bold)
 +font(opensans-italic, opensans-italic)
 +font(myriadpro, myriadpro)
++font(neuron-heavy, neuron-heavy)
 
 =op
 	font-family: "opensans", Arial, sans-serif
@@ -64,6 +65,8 @@
 	font-family: "opensans-italic", Arial, sans-serif
 =myriad
 	font-family: "myriadpro", sans-serif
+=neuron
+	font-family: "neuron-heavy", sans-serif
 
 body
 	min-width: 320px
@@ -71,7 +74,11 @@ body
 	background-color: #FFFFFF
 	line-height: 1.4
 	+op
+	&.no-scroll
+		overflow: hidden
 
+.out
+	overflow: hidden
 
 // common blocks
 .l
@@ -101,6 +108,9 @@ a
 
 .icon-pdf
 	+s(pdf)
+
+.icon-aero
+	+s(helicopter)
 
 // input and textarea
 input

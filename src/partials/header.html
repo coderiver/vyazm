@@ -1,29 +1,42 @@
 <!-- begin header  -->
-<div class="header">
+<div class="header js-header">
 	<div class="header__in">
 		<div class="l">
 			<div class="header__menu">
-				<div class="menu">
+				<a href="#" class="btn-menu js-btn-menu"></a>
+				<div class="menu js-menu">
 					<div class="menu__left">
 						<ul class="menu__list">
-							<li><a href="#">План квартала</a></li>
-							<li><a href="#">Преимущества</a></li>
-							<li><a href="#">Таунхаусы</a></li>
+							<li><a class="js-link" href="#plan">План квартала</a></li>
+							<li><a class="js-link" href="#advantage">Преимущества</a></li>
+							<li><a class="js-link" href="#townhouses">Таунхаусы</a></li>
 						</ul>
 					</div>
 					<div class="menu__right">
 						<ul class="menu__list">
-							<li><a href="#">О застройщике</a></li>
-							<li><a href="#">Инфраструктура</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a class="js-link" href="#about">О застройщике</a></li>
+							<li><a class="js-link" href="#map">Инфраструктура</a></li>
+							<li><a class="js-link" href="#contacts">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="tel">
 					<p class="tel__num"><span>+7 (495) 221-71-12</span></p>
-					<p>обратный звонок</p>
-					<a class="tel__ico" href="#"><i class="icon icon-tel"></i></a>
+					<p class="tel__txt">обратный звонок</p>
+					<a class="tel__ico js-tel-ico" href="#"><i class="icon icon-tel"></i></a>
 				</div>
+			</div>
+			<div class="header__popup js-header-popup">
+				<form id="popup-form" class="form no-bg">
+					<a href="#" class="form__close js-close"><span>x</span></a>
+					<label class="form__label">
+						<input type="text" placeholder="Имя" data-validation="required" data-validation-error-msg="Обязательное поле">
+					</label>
+					<label class="form__label">
+						<input type="text" placeholder="E-mail" data-validation="required" data-validation-error-msg="Обязательное поле">
+					</label>
+					<button type="submit" class="btn form__btn">Отправить</button>
+				</form>
 			</div>
 		</div>
 	</div>

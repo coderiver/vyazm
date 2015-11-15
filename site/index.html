@@ -18,31 +18,44 @@
 <div class="out">
 
 	<!-- begin header  -->
-	<div class="header">
+	<div class="header js-header">
 		<div class="header__in">
 			<div class="l">
 				<div class="header__menu">
-					<div class="menu">
+					<a href="#" class="btn-menu js-btn-menu"></a>
+					<div class="menu js-menu">
 						<div class="menu__left">
 							<ul class="menu__list">
-								<li><a href="#">План квартала</a></li>
-								<li><a href="#">Преимущества</a></li>
-								<li><a href="#">Таунхаусы</a></li>
+								<li><a class="js-link" href="#plan">План квартала</a></li>
+								<li><a class="js-link" href="#advantage">Преимущества</a></li>
+								<li><a class="js-link" href="#townhouses">Таунхаусы</a></li>
 							</ul>
 						</div>
 						<div class="menu__right">
 							<ul class="menu__list">
-								<li><a href="#">О застройщике</a></li>
-								<li><a href="#">Инфраструктура</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a class="js-link" href="#about">О застройщике</a></li>
+								<li><a class="js-link" href="#map">Инфраструктура</a></li>
+								<li><a class="js-link" href="#contacts">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="tel">
 						<p class="tel__num"><span>+7 (495) 221-71-12</span></p>
-						<p>обратный звонок</p>
-						<a class="tel__ico" href="#"><i class="icon icon-tel"></i></a>
+						<p class="tel__txt">обратный звонок</p>
+						<a class="tel__ico js-tel-ico" href="#"><i class="icon icon-tel"></i></a>
 					</div>
+				</div>
+				<div class="header__popup js-header-popup">
+					<form id="popup-form" class="form no-bg">
+						<a href="#" class="form__close js-close"><span>x</span></a>
+						<label class="form__label">
+							<input type="text" placeholder="Имя" data-validation="required" data-validation-error-msg="Обязательное поле">
+						</label>
+						<label class="form__label">
+							<input type="text" placeholder="E-mail" data-validation="required" data-validation-error-msg="Обязательное поле">
+						</label>
+						<button type="submit" class="btn form__btn">Отправить</button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -62,7 +75,7 @@
 	</div>
 	<!-- end upper -->
 	<!-- begin about  -->
-	<div class="about">
+	<div id="townhouses" class="about">
 		<div class="l">
 			<div class="about__in">
 				<p class="about__txt">«Вяземское» - это охраняемый квартал таунхаусов, расположенный на землях, в конце XV века принадлежащих князьям Вяземским.</p>
@@ -78,7 +91,7 @@
 	</div>
 	<!-- end about -->
 	<!-- begin advantage  -->
-	<div class="advantage">
+	<div id="advantage" class="advantage">
 		<div class="l">
 			<div class="advantage__in">
 				<h3 class="advantage__ttl">Преимущества<br> Вяземского</h3>
@@ -167,34 +180,255 @@
 	<!-- begin gallery -->
 	<div class="gallery">
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/1.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="0" style="background-image: url('img/gallery/1.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/2.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="1" style="background-image: url('img/gallery/2.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/3.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="2" style="background-image: url('img/gallery/3.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/4.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="3" style="background-image: url('img/gallery/4.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/5.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="4" style="background-image: url('img/gallery/5.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/6.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="5" style="background-image: url('img/gallery/6.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/7.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="6" style="background-image: url('img/gallery/7.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img" style="background-image: url('img/gallery/8.jpg')"></div>
+			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="7" style="background-image: url('img/gallery/8.jpg')"></div>
 		</div>
 	</div>
 	<!-- end gallery -->
-	<!-- begin development -->
-	<div class="development">
+	<!-- begin plan -->
+	<div id="plan" class="plan">
 		<div class="l">
+			<div class="plan__in">
+				<div class="plan__bl">
+					<h3 class="plan__ttl">План<br> Квартала</h3>
+					<p>Выберите место расположение таунхауса.</p>
+					<div class="plan__zoom">
+						<img class="js-zoom" src="img/plan.png" data-zoom-image="img/plan-big.jpg" alt="plan">
+					</div>
+					<div class="aero">
+						<a class="aero__link" href="http://www.visualhotels.com/a101/vyazemskoe.html" target="_blank">
+							<i class="icon icon-aero"></i>
+						</a>
+						<p>Аэрофотосъемка</p>
+					</div>
+				</div>
+				<div class="plan__bl">
+					<!-- begin tabs-->
+					<div class="tabs">
+						<ul class="tabs__list">
+							<li class="tabs__num is-a js-tabs-link is-active" data-color="#f6b188">A</li>
+							<li class="tabs__num is-b js-tabs-link" data-color="#edb2d2">B</li>
+							<li class="tabs__num is-c js-tabs-link" data-color="#dcde4c">C</li>
+							<li class="tabs__num is-d js-tabs-link" data-color="#f9eb10">D</li>
+							<li class="tabs__num is-e js-tabs-link" data-color="#fbb51f">E</li>
+							<li class="tabs__num is-f js-tabs-link" data-color="#94d1d2">F</li>
+							<li class="tabs__num is-g js-tabs-link" data-color="#808080">G</li>
+							<li class="tabs__num is-h js-tabs-link" data-color="#a7b6bd">H</li>
+						</ul>
+						<div class="tabs__content">
+							<div class="tabs__bl js-tabs-block is-active" data-name="A">
+								<img src="img/townhouses/a.jpg" alt="townhouse">
+							</div>
+							<div class="tabs__bl js-tabs-block" data-name="B">
+								<img src="img/townhouses/b.jpg" alt="townhouse">
+							</div>
+							<div class="tabs__bl js-tabs-block" data-name="C">
+								<img src="img/townhouses/c.jpg" alt="townhouse">
+							</div>
+							<div class="tabs__bl js-tabs-block" data-name="D">
+								<img src="img/townhouses/d.jpg" alt="townhouse">
+							</div>
+							<div class="tabs__bl js-tabs-block" data-name="E">
+								<img src="img/townhouses/e.jpg" alt="townhouse">
+							</div>
+							<div class="tabs__bl js-tabs-block" data-name="F">
+								<img src="img/townhouses/f.jpg" alt="townhouse">
+							</div>
+							<div class="tabs__bl js-tabs-block" data-name="G">
+								<img src="img/townhouses/e.jpg" alt="townhouse">
+							</div>
+							<div class="tabs__bl js-tabs-block" data-name="H">
+								<img src="img/townhouses/h.jpg" alt="townhouse">
+							</div>
+						</div>
+					</div>
+					<!-- end tabs-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end plan -->
+	<!-- begin map  -->
+		<div class="map" id="location">
+		<div id="map"></div>
+			<script>
+				var map;
+				function initMap() {
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 12,
+						center: {lat: 55.5943907, lng:37.4571647},
+						zoomControl: true,
+						scrollwheel: false,
+						mapTypeControlOptions: {
+							mapTypeIds: [google.maps.MapTypeId.ROADMAP]
+						}
+					});
+					var iconBase = 'img/markers/';
+					var marker = new google.maps.Marker({
+						position: {lat: 55.5997527,lng: 37.4687135},
+						map: map,
+						icon: iconBase + 'marker-bag.png'
+					});
+						var infowindow = new google.maps.InfoWindow({
+						    content: 'Фуд сити'
+						});
+						marker.addListener('click', function() {
+						    infowindow.open(map, marker);
+						});
+					var marker1 = new google.maps.Marker({
+						position: {lat: 55.605533, lng: 37.4901283},
+						map: map,
+						icon: iconBase + 'marker-bag.png'
+					});
+						var infowindow1 = new google.maps.InfoWindow({
+						    content: 'Ашан, ТЦ Мега'
+						});
+						marker1.addListener('click', function() {
+						    infowindow1.open(map, marker1);
+						});
+					var marker2 = new google.maps.Marker({
+						position: {lat: 55.5810737, lng: 37.4764346},
+						map: map,
+						icon: iconBase + 'marker-bag.png'
+					});
+						var infowindow2 = new google.maps.InfoWindow({
+						    content: 'Банкомат'
+						});
+						marker2.addListener('click', function() {
+						    infowindow2.open(map, marker2);
+						});
+					var marker3 = new google.maps.Marker({
+						position: {lat: 55.6037644, lng:37.4903345 },
+						map: map,
+						icon: iconBase + 'marker-cafe.png'
+					});
+						var infowindow3 = new google.maps.InfoWindow({
+						    content: 'Starbucks в ТРЦ Мега Теплый Стан'
+						});
+						marker3.addListener('click', function() {
+						    infowindow3.open(map, marker3);
+						});
+					var marker4 = new google.maps.Marker({
+						position: {lat: 55.5985301, lng:37.5114791 },
+						map: map,
+						icon: iconBase + 'marker-heal.png'
+					});
+						var infowindow4 = new google.maps.InfoWindow({
+						    content: 'Аптека'
+						});
+						marker4.addListener('click', function() {
+						    infowindow4.open(map, marker4);
+						});
+					var marker5 = new google.maps.Marker({
+						position: {lat: 55.5883116, lng:37.3713862 },
+						map: map,
+						icon: iconBase + 'marker-heal.png'
+					});
+						var infowindow5 = new google.maps.InfoWindow({
+						    content: 'Аптека'
+						});
+						marker5.addListener('click', function() {
+						    infowindow5.open(map, marker5);
+						});
+					var marker6 = new google.maps.Marker({
+						position: {lat: 55.595037, lng: 37.4428724 },
+						map: map,
+						icon: iconBase + 'marker-bag.png'
+					});
+						var infowindow6 = new google.maps.InfoWindow({
+						    content: 'Магазин'
+						});
+						marker6.addListener('click', function() {
+						    infowindow6.open(map, marker6);
+						});
+					var marker7 = new google.maps.Marker({
+						position: {lat: 55.5981079, lng:37.5264108 },
+						map: map,
+						icon: iconBase + 'marker-sport.png'
+					});
+						var infowindow7 = new google.maps.InfoWindow({
+						    content: 'Комплекс водных развлечений Мореон'
+						});
+						marker7.addListener('click', function() {
+						    infowindow7.open(map, marker7);
+						});
+					var marker8 = new google.maps.Marker({
+						position: {lat: 55.5898196, lng:37.3740793 },
+						map: map,
+						icon: iconBase + 'marker-sport.png'
+					});
+						var infowindow8 = new google.maps.InfoWindow({
+						    content: 'Фитнес-клуб'
+						});
+						marker8.addListener('click', function() {
+						    infowindow8.open(map, marker8);
+						});
+					var marker9 = new google.maps.Marker({
+						position: {lat: 55.615257, lng:37.4724031 },
+						map: map,
+						icon: iconBase + 'marker-book.png'
+					});
+		
+						var infowindow9 = new google.maps.InfoWindow({
+						    content: 'Школа № 2070'
+						});
+						marker9.addListener('click', function() {
+						    infowindow9.open(map, marker9);
+						});
+					var marker10 = new google.maps.Marker({
+						position: {lat: 55.6075092, lng:37.5103482 },
+						map: map,
+						icon: iconBase + 'marker-book.png'
+					});
+						var infowindow10 = new google.maps.InfoWindow({
+						    content: 'Школа № 2103'
+						});
+						marker10.addListener('click', function() {
+						    infowindow10.open(map, marker10);
+						});
+					var marker11 = new google.maps.Marker({
+						position: {lat: 55.605962, lng:37.5275053 },
+						map: map,
+						icon: iconBase + 'marker-book.png'
+					});
+						var infowindow11 = new google.maps.InfoWindow({
+						    content: 'Школа № 1212 '
+						});
+						marker11.addListener('click', function() {
+						    infowindow11.open(map, marker11);
+						});
+				}
+			</script>
+			<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCPLx_osAJ33YNibIjaqX9uH5kbYIlNJVY&callback=initMap" async defer></script>
+		</div>
+	<!-- end map -->
+	<!-- begin development -->
+	<div id="about" class="development">
+		<div class="l">
+			<div class="development__ttl">
+				<h2><span>А101 ДЕВЕЛОПМЕНТ</span></h2>
+				<p class="development__subttl">МЫ СТРОИМ ГОРОД, ГДЕ ХОЧЕТСЯ ЖИТЬ!</p>
+			</div>
 			<div class="development__in">
 				<div class="development__bl">
 					<div class="development__txt">
@@ -239,7 +473,7 @@
 	</div>
 	<!-- end development -->
 	<!-- begin contacts -->
-	<div class="contacts">
+	<div id="contacts" class="contacts">
 		<div class="l">
 			<div class="contacts__in">
 				<div class="contacts__bl">
@@ -273,15 +507,15 @@
 					</div>
 				</div>
 				<div class="contacts__bl is-form">
-					<form class="form">
+					<form id="form-footer" class="form">
 						<p class="form__ttl">У вас есть вопрос?</p>
 						<label class="form__label">
-							<input type="text" placeholder="Имя">
+							<input type="text" name="name" placeholder="Имя" data-validation-error-msg="Обязательное поле" data-validation="required">
 						</label>
 						<label class="form__label">
-							<input type="text" placeholder="E-mail">
+							<input type="text" name="email" placeholder="E-mail" data-validation-error-msg="Обязательное поле" data-validation="required">
 						</label>
-						<textarea class="textarea" placeholder="Ваш вопрос"></textarea>
+						<textarea name="comment" class="textarea" placeholder="Ваш вопрос"></textarea>
 						<button type="submit" class="btn form__btn">Отправить</button>
 					</form>
 					<p class="contacts__tel">+7 (495) 221-71-12</p>
@@ -355,5 +589,22 @@
 	<!-- end doc -->
 </div>
 <!-- END out-->
+<!-- popup -->
+<!-- <div class="popup popup_gallery js-popup js-popup-gallery">
+	<button class="popup__close js-popup-close"></button>
+	<!-- slider -->
+	<div class="slider js-slick">
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/1.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/2.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/3.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/4.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/5.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/6.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/7.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/8.jpg)"></div>
+		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/9.jpg)"></div>
+	</div>
+</div> -->
+<!-- popup -->
 </body>
 </html>
