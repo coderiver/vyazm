@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
+	// popup
 	// (function () {
 	// 	var body  = $('body'),
+	// 		enter = $('.js-popup-enter'),
 	// 		popup = $('.js-popup'),
 	// 		close = $('.js-popup-close'),
-	// 		sl    = $('.js-slick');
-	// 	popup.on('click', function () {
+	// 		sl    = $('.js-sl');
+	// 	enter.on('click', function () {
 	// 		var _this = $(this),
 	// 			el = _this.data('popup');
-	// 		//popup.fadeOut(200);
+	// 		popup.fadeOut(200);
 	// 		$('.' + el).fadeIn(200);
 	// 		body.addClass('no-scroll');
 	// 		// gallery

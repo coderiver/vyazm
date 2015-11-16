@@ -100,15 +100,17 @@ galleryActiveClass:"zoomGalleryActive",imageCrossfade:!1,constrainType:!1,constr
 if(qtyAllowed==undefined){var elementType=$el.get(0).nodeName;alert('Attribute "data-validation-qty" is missing from '+elementType+" named "+$el.attr("name"))}var qtyCheckResults=$.formUtils.numericRangeCheck(checkedCount,qtyAllowed);switch(qtyCheckResults[0]){case"out":this.errorMessage=lang.groupCheckedRangeStart+qtyAllowed+lang.groupCheckedEnd;isValid=false;break;case"min":this.errorMessage=lang.groupCheckedTooFewStart+qtyCheckResults[1]+lang.groupCheckedEnd;isValid=false;break;case"max":this.errorMessage=lang.groupCheckedTooManyStart+qtyCheckResults[1]+lang.groupCheckedEnd;isValid=false;break;default:isValid=true}if(!isValid){var _triggerOnBlur=function(){$checkBoxes.unbind("click",_triggerOnBlur);$checkBoxes.filter("*[data-validation]").validateInputOnBlur(lang,conf,false,"blur")};$checkBoxes.bind("click",_triggerOnBlur)}return isValid}})})(jQuery);
 $(document).ready(function() {
 
+	// popup
 	// (function () {
 	// 	var body  = $('body'),
+	// 		enter = $('.js-popup-enter'),
 	// 		popup = $('.js-popup'),
 	// 		close = $('.js-popup-close'),
-	// 		sl    = $('.js-slick');
-	// 	popup.on('click', function () {
+	// 		sl    = $('.js-sl');
+	// 	enter.on('click', function () {
 	// 		var _this = $(this),
 	// 			el = _this.data('popup');
-	// 		//popup.fadeOut(200);
+	// 		popup.fadeOut(200);
 	// 		$('.' + el).fadeIn(200);
 	// 		body.addClass('no-scroll');
 	// 		// gallery
