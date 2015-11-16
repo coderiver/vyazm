@@ -207,7 +207,7 @@ $(document).ready(function() {
 
 	// form validation
 	(function() {
-		var popup  = $('.js-header-popup'),
+		var headerpopup  = $('.js-header-popup'),
 			thanks = $('.js-popup-thanks'),
 			body   = $('body');
 		// welcome
@@ -216,7 +216,7 @@ $(document).ready(function() {
 			onSuccess: function() {
 				post_data = {
 					'name': $('#popup-form input[name=name]').val(),
-					'email': $('#popup-form input[name=email]').val()
+					'tel': $('#popup-form input[name=tel]').val()
 				};
 				// Ajax post data to server
 				$.post('send.php', post_data, function(response) {
@@ -225,13 +225,10 @@ $(document).ready(function() {
 					}
 					else {
 						// reset values in all input fields
-						popup.fadeOut();
+						headerpopup.removeClass('is-active');
 						thanks.fadeIn('fast');
+						console.log('bla');
 						$('#popup-form').get(0).reset();
-						setTimeout(function() {
-							thanks.fadeOut('fast');
-							body.removeClass('is-overflow');
-						}, 2000);
 					}
 				}, 'json');
 				return false;
@@ -244,7 +241,7 @@ $(document).ready(function() {
 				post_data = {
 					'name': $('#form-footer input[name=name]').val(),
 					'email': $('#form-footer input[name=email]').val(),
-					'comment': $('#form-footer input[name=comment]').val()
+					'comment': $('#form-footer textarea[name=comment]').val()
 				};
 				//Ajax post data to server
 				$.post('send.php', post_data, function(response) {
@@ -252,10 +249,6 @@ $(document).ready(function() {
 					else {
 						thanks.fadeIn('fast');
 						$('#form-footer').get(0).reset();
-						setTimeout(function() {
-							thanks.fadeOut('fast');
-							body.removeClass('is-overflow');
-						}, 2000);
 					}
 				}, 'json');
 				return false;

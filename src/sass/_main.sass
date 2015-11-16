@@ -1,3 +1,34 @@
+// fixed-btn
+.fixed-btn
+	position: fixed
+	top: 305px
+	left: 0
+	width: 123px
+	height: 101px
+	background-color: #fff
+	border: 1px solid #dadada
+	box-shadow: 3.5px 3.5px 5px rgba(25, 24, 20, 0.25)
+	z-index: 100
+	border-radius: 0 50% 50% 0
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -32px
+	&:before
+		+s(symbol)
+	&:after
+		opacity: 0
+		+tr(opacity 0.4s)
+		+s(symbol-h)
+	&:hover
+		&:after
+			opacity: 1
+	+r(768)
+		display: none
+
 // upper
 .upper
 	position: relative
@@ -170,11 +201,12 @@
 			z-index: 1
 			+tr(0.3s)
 	&__txt
-		margin-top: 35px
-		max-width: 430px
+		margin-top: 30px
+		max-width: 380px
 		overflow: hidden
+		line-height: 30px
 		h4
-			margin-bottom: 30px
+			margin-bottom: 25px
 			font-size: 20px
 			color: #FFF
 			+op-sb
@@ -485,7 +517,7 @@
 		padding: 0 20px
 		font-size: 24px
 		color: #222
-		vertical-align: top
+		vertical-align: bottom
 		&.txt-right
 			text-align: right
 		&.txt-center
