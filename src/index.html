@@ -137,28 +137,28 @@
 	<!-- begin gallery -->
 	<div class="gallery">
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="0" style="background-image: url('img/gallery/1.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="0" style="background-image: url('img/gallery/1.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="1" style="background-image: url('img/gallery/2.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="1" style="background-image: url('img/gallery/2.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="2" style="background-image: url('img/gallery/3.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="2" style="background-image: url('img/gallery/3.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="3" style="background-image: url('img/gallery/4.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="3" style="background-image: url('img/gallery/4.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="4" style="background-image: url('img/gallery/5.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="4" style="background-image: url('img/gallery/5.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="5" style="background-image: url('img/gallery/6.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="5" style="background-image: url('img/gallery/6.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="6" style="background-image: url('img/gallery/7.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="6" style="background-image: url('img/gallery/7.jpg')"></div>
 		</div>
 		<div class="gallery__bl">
-			<div class="gallery__img js-popup" data-popup="js-popup-gallery" data-index="7" style="background-image: url('img/gallery/8.jpg')"></div>
+			<div class="gallery__img js-popup-enter" data-popup="js-popup-gallery" data-index="7" style="background-image: url('img/gallery/8.jpg')"></div>
 		</div>
 	</div>
 	<!-- end gallery -->
@@ -170,7 +170,7 @@
 					<h3 class="plan__ttl">План<br> Квартала</h3>
 					<p>Выберите место расположение таунхауса.</p>
 					<div class="plan__zoom">
-						<img class="js-zoom" src="img/plan.png" data-zoom-image="img/plan-big.jpg" alt="plan">
+						<img class="js-zoom js-popup-enter" src="img/plan.png" data-zoom-image="img/plan-big.jpg" data-popup="js-popup-plan" alt="plan">
 					</div>
 					<div class="aero">
 						<a class="aero__link" href="http://www.visualhotels.com/a101/vyazemskoe.html" target="_blank">
@@ -356,9 +356,11 @@
 	<!-- end doc -->
 </div>
 <!-- END out-->
-<!-- <div class="popup popup_gallery js-popup js-popup-gallery">
-	<button class="popup__close js-popup-close"></button>
-	<div class="slider js-slick">
+<!-- popup slider -->
+<div class="popup is-gallery js-popup js-popup-gallery">
+	<button class="popup__close js-popup-close"><span>x</span></button>
+	<!-- slider -->
+	<div class="slider js-sl">
 		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/1.jpg)"></div>
 		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/2.jpg)"></div>
 		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/3.jpg)"></div>
@@ -369,6 +371,25 @@
 		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/8.jpg)"></div>
 		<div class="slider__item js-sl-item" style="background-image: url(img/gallery/9.jpg)"></div>
 	</div>
-</div> -->
+</div>
+<!-- popup -->
+<!-- popup  plan-->
+<div class="popup js-popup js-popup-plan">
+	<button class="popup__close js-popup-close"><span>x</span></button>
+	<div class="popup__in">
+		<img src="img/plan-big.jpg" alt="">
+	</div>
+</div>
+<!-- popup -->
+<!-- popup  plan-->
+<div class="popup js-popup js-popup-thanks">
+	<div class="popup__in">
+		<a href="#" class="close js-popup-close"><span>x</span></a>
+		<div class="popup__thanks">
+			Спасибо за обращение, мы скоро ответим Вам!
+		</div>
+	</div>
+</div>
+<!-- popup -->
 </body>
 </html>

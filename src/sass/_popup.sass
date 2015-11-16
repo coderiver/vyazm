@@ -11,20 +11,53 @@
 	padding: 20px
 	overflow: auto
 	z-index: 999
+	white-space: nowrap
 	+vertical
-	&.popup_gallery
+	&.is-gallery
 		padding: 0
 		&:before
 			display: none
-		.popup__close
-			top: 50px
-			right: 80px
-			width: 104px
-			height: 104px
-			background-color: rgba(19, 29, 45, 0.6)
-			border: 2px solid #FFF
-			border-radius: 50%
 	.popup__in
-		display: inline-block
 		position: relative
+		display: inline-block
+		padding: 114px 65px
+		font-size: 16px
+		background: #FFF
+		border-radius: 20px
+		white-space: normal
 		vertical-align: middle
+	.popup__close
+		position: fixed
+		top: 30px
+		right: 40px
+		width: 65px
+		height: 65px
+		background-color: rgba(19, 29, 45, 0.6)
+		border: 2px solid #FFF
+		border-radius: 50%
+		z-index: 100
+		+tr(0.3s)
+		+vertical
+		&:hover
+			opacity: .7
+		span
+			display: inline-block
+			font-size: 40px
+			line-height: 1
+			color: #fff
+			vertical-align: -10px
+	.popup__thanks
+		max-width: 500px
+		font-size: 30px
+		color: #375272
+		line-height: 1.2
+		+op-sb
+	+r(650)
+		padding: 10px
+		.popup__close
+			right: 20px
+			width: 40px
+			height: 40px
+			span
+				font-size: 20px
+				vertical-align: -5px
